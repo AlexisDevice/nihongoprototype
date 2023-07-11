@@ -139,3 +139,40 @@
     font-family: sans-serif;
     font-size: calc(1em + 0.5vw);
 }
+
+.notes {
+    width: 100%;
+    height: 1000px;
+    background-color: var(--secundary);
+}
+
+.notes>h2 {
+    margin-top: 50px;
+    color: var(--primary);
+    font-family: sans-serif;
+    font-size: calc(1em + 1.5vw);
+    text-align: center;
+}
+
+.notes>p {
+    margin-top: 50px;
+    color: var(--primary);
+    font-family: sans-serif;
+    font-size: calc(1em + 0.7vw);
+    text-align: center;
+}
+
+.notes>.logs {
+    margin: 0px auto;
+    width: 80%;
+}
+
+.notes>.logs>p {
+    margin-top: 50px;
+    border-left: 5px solid var(--primary);
+    padding-left: 20px;
+    color: var(--primary);
+    font-family: sans-serif;
+    font-size: calc(1em + 0.7vw);
+    background-color: rgba(153, 191, 130, 0.1);
+}
