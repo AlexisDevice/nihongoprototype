@@ -4,7 +4,7 @@ class Syllabary {
         { hiragana: "い", katakana: "イ", romaji: "i" },
         { hiragana: "う", katakana: "ウ", romaji: "u" },
         { hiragana: "え", katakana: "エ", romaji: "e" },
-        { hiragana: "お", katakana: "オ", romaji: "o" },
+        { hiragana: "お", katakana: "オ", romaji: "o" }, // y = 4
         { hiragana: "か", katakana: "カ", romaji: "ka" },
         { hiragana: "き", katakana: "キ", romaji: "ki" },
         { hiragana: "く", katakana: "ク", romaji: "ku" },
@@ -45,7 +45,7 @@ class Syllabary {
         { hiragana: "ろ", katakana: "ロ", romaji: "ro" },
         { hiragana: "わ", katakana: "ワ", romaji: "wa" },
         { hiragana: "を", katakana: "ヲ", romaji: "wo" },
-        { hiragana: "ん", katakana: "ン", romaji: "n" }, //45
+        { hiragana: "ん", katakana: "ン", romaji: "n" }, // y = 45
         { hiragana: "が", katakana: "ガ", romaji: "ga" },
         { hiragana: "ぎ", katakana: "ギ", romaji: "gi" },
         { hiragana: "ぐ", katakana: "グ", romaji: "gu" },
@@ -70,7 +70,7 @@ class Syllabary {
         { hiragana: "ぴ", katakana: "ピ", romaji: "pi" },
         { hiragana: "ぷ", katakana: "プ", romaji: "pu" },
         { hiragana: "ぺ", katakana: "ペ", romaji: "pe" },
-        { hiragana: "ぽ", katakana: "ポ", romaji: "po" }, //70
+        { hiragana: "ぽ", katakana: "ポ", romaji: "po" }, // y = 70
         { hiragana: "きゃ", katakana: "キャ", romaji: "kya" },
         { hiragana: "きゅ", katakana: "キュ", romaji: "kyu" },
         { hiragana: "きょ", katakana: "キョ", romaji: "kyo" },
@@ -106,6 +106,10 @@ class Syllabary {
         { hiragana: "びょ", katakana: "ビョ", romaji: "byo" },
         { hiragana: "ぴゃ", katakana: "ピャ", romaji: "pya" },
         { hiragana: "ぴゅ", katakana: "ピュ", romaji: "pyu" },
-        { hiragana: "ぴょ", katakana: "ピョ", romaji: "pyo" } //106
+        { hiragana: "ぴょ", katakana: "ピョ", romaji: "pyo" } // y = 106
     ];
+
+    static getSyllabary(y) {
+        return Syllabary.japaneseSyllabary[y];
+    }
 }
