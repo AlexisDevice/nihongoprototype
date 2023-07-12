@@ -156,7 +156,9 @@
 }
 
 .notes>p {
+    width: 75%;
     margin-top: 50px;
+    margin: 50px auto 0px auto;
     color: var(--primary);
     font-family: sans-serif;
     font-size: calc(1em + 0.7vw);
@@ -172,6 +174,7 @@
     margin-top: 50px;
     border-left: 5px solid var(--primary);
     padding-left: 20px;
+    padding: 10px 0px 10px 20px;
     color: var(--primary);
     font-family: sans-serif;
     font-size: calc(1em + 0.7vw);
