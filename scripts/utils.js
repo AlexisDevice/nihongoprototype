@@ -1,6 +1,8 @@
 class Utils {
     static isAnswer = false;
-    
+    static corrects = 0;
+    static incorrects = 0;
+
     static getNum(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
