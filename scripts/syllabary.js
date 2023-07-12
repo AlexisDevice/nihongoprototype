@@ -1,4 +1,4 @@
-class syllabary {
+class Syllabary {
     static japaneseSyllabary = [
         { hiragana: "あ", katakana: "ア", romaji: "a" },
         { hiragana: "い", katakana: "イ", romaji: "i" },
@@ -107,5 +107,5 @@ class syllabary {
         { hiragana: "ぴゃ", katakana: "ピャ", romaji: "pya" },
         { hiragana: "ぴゅ", katakana: "ピュ", romaji: "pyu" },
         { hiragana: "ぴょ", katakana: "ピョ", romaji: "pyo" } //106
-    ]
+    ];
 }
