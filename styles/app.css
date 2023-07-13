@@ -138,7 +138,7 @@
     }
 
     .panel>.board {
-        height: 70%;
+        height: 65%;
         background-color: transparent;
         border-radius: 0%;
     }
@@ -151,7 +151,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         border-radius: 0%;
-        height: 30%;
+        height: 35%;
     }
 
     .dock {
