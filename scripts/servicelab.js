@@ -64,15 +64,18 @@ function next_issue() {
     show_issue();
 }
 
+function send_button() {
+    if (Utils.isAnswer) {
+        next_issue();
+    }
+    else {
+        send();
+    }
+}
 
 inbox.addEventListener('keyup', (e) => {
     if (e.keyCode == 13) {
-        if (Utils.isAnswer) {
-            next_issue();
-        }
-        else {
-            send();
-        }
+        send_button();
     }
 });
 
