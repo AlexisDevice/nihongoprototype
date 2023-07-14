@@ -38,9 +38,10 @@ function cleaner() {
 }
 
 function isCorrect() {
-    let answer = (((inbox.value).toLowerCase()).trim()); // Quitando los espacios sobrantes y volviendo minusculas
+    // Quitando los espacios sobrantes y volviendo minusculas
+    let user_answer = (((inbox.value).toLowerCase()).trim()); 
 
-    if (answer == newCard.romaji) {
+    if (user_answer == newCard.romaji) {
         show_message("Correcto");
         Utils.corrects++; //incrementa el score
     }
@@ -53,19 +54,19 @@ function isCorrect() {
 }
 
 function send() {
-    Utils.isAnswer = true;
+    Utils.isAnswered = true;
     isCorrect();
 }
 
 function next_issue() {
-    Utils.isAnswer = false;
+    Utils.isAnswered = false;
     cleaner();
     Create();
     show_issue();
 }
 
 function send_button() {
-    if (Utils.isAnswer) {
+    if (Utils.isAnswered) {
         next_issue();
     }
     else {

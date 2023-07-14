@@ -1,5 +1,5 @@
 class Utils {
-    static isAnswer = false;
+    static isAnswered = false;
     static corrects = 0;
     static incorrects = 0;
 
