@@ -29,6 +29,33 @@ function freshScore() {
     document.getElementById("incorrect").textContent = Utils.incorrects;
 }
 
+function addToHistoryNihongoLab(response) {
+    /* Seleccionado el contenedor de todas las cards */
+    const history = document.querySelector(".scroll");
+    /* Creando la card con su info */
+    const card = document.createElement("div");
+    card.className = "card";
+    const card_issue = document.createElement("span");
+    const card_answer = document.createElement("span");
+    const card_response = document.createElement("div");
+    /* Asignando si la respuesta es correcta o no */
+    card_response.className = (response) ? "response_correct" : "response_incorrect";
+
+    card_issue.textContent = newCard.hiragana;
+    card_answer.textContent = (response) ? newCard.romaji : inbox.value + " | " + newCard.romaji;
+
+    /* Agregando los elementos a la card */
+    card.appendChild(card_issue);
+    card.appendChild(card_response);
+    card.appendChild(card_answer);
+
+    if (history.hasChildNodes()) {
+        history.insertBefore(card, history.firstChild);
+    } else {
+        history.appendChild(card);
+    }
+}
+
 function cleaner() {
     let empty = "";
     show_issue(empty);
@@ -44,11 +71,13 @@ function isCorrect() {
     if (user_answer == newCard.romaji) {
         show_message("Correcto");
         Utils.corrects++; //incrementa el score
+        addToHistoryNihongoLab(true);
     }
     else {
         show_message("Incorrecto");
         show_answer(newCard.romaji);
         Utils.incorrects++; // incrementa el score
+        addToHistoryNihongoLab(false);
     }
     freshScore();
 }
