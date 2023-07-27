@@ -13,7 +13,8 @@ function Create() {
 }
 
 function show_issue() {
-    Utils.show(newCard.hiragana);
+    const Issue = (Utils.getNum(0, 9) >= 7) ? newCard.hiragana : newCard.katakana;
+    Utils.show(Issue);
 }
 
 function show_message(message) {
@@ -41,7 +42,7 @@ function addToHistoryNihongoLab(response) {
     /* Asignando si la respuesta es correcta o no */
     card_response.className = (response) ? "response_correct" : "response_incorrect";
 
-    card_issue.textContent = newCard.hiragana;
+    card_issue.textContent = document.getElementById("issue").textContent;
     card_answer.textContent = (response) ? newCard.romaji : inbox.value + " | " + newCard.romaji;
 
     /* Agregando los elementos a la card */
