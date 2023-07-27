@@ -72,8 +72,7 @@ function isCorrect() {
         show_message("Correcto");
         Utils.corrects++; //incrementa el score
         addToHistoryNihongoLab(true);
-    }
-    else {
+    } else {
         show_message("Incorrecto");
         show_answer(newCard.romaji);
         Utils.incorrects++; // incrementa el score
@@ -97,8 +96,7 @@ function next_issue() {
 function send_button() {
     if (Utils.isAnswered) {
         next_issue();
-    }
-    else {
+    } else {
         send();
     }
 }

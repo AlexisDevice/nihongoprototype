@@ -148,7 +148,7 @@
 }
 
 .notes>h2 {
-    margin-top: 50px;
+    margin: 50px auto;
     color: var(--primary);
     font-family: sans-serif;
     font-size: calc(1em + 1.5vw);
@@ -157,8 +157,7 @@
 
 .notes>p {
     width: 75%;
-    margin-top: 50px;
-    margin: 50px auto 0px auto;
+    margin: 15px auto 0px auto;
     color: var(--primary);
     font-family: sans-serif;
     font-size: calc(1em + 0.7vw);
@@ -166,14 +165,15 @@
 }
 
 .notes>.logs {
-    margin: 0px auto;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     width: 80%;
 }
 
-.notes>.logs>p {
-    margin-top: 50px;
+.notes>.logs>span {
     border-left: 5px solid var(--primary);
-    padding-left: 20px;
     padding: 10px 0px 10px 20px;
     color: var(--primary);
     font-family: sans-serif;
