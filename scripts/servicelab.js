@@ -13,7 +13,7 @@ function Create() {
 }
 
 function show_issue() {
-    const Issue = (Utils.getNum(0, 9) >= 7) ? newCard.hiragana : newCard.katakana;
+    const Issue = (Utils.getNum(0, 9) <= 7) ? newCard.hiragana : newCard.katakana;
     Utils.show(Issue);
 }
 
