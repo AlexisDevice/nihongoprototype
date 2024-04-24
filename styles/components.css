@@ -1,6 +1,6 @@
 /* imports */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* post */
 
@@ -13,4 +13,26 @@
 .post .side {
     width: 50%;
     height: 100%;
+}
+
+/* tabla */
+
+.table {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: fit-content;
+}
+
+/* Carta */
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0px;
+    width: 90%;
+    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    border-radius: 16px;
 }

@@ -5,54 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NihongoLearn</title>
     <link rel="icon" href="./assets/brightness-alt-high-fill.svg">
+    <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/home.css">
 </head>
 <body>
     <div class="hero">
-        <img src="./assets/brightness-alt-high-fill.svg" alt="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 16 16">
+            <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1h2zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707l1.414 1.414zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z"/>
+        </svg>
         <h1>Bienvenido a <span class="special">NihongoLearn</span></h1>
         <h2><span class="special">Created by</span> Alexis Meléndez</h2>
     </div>
-    <div class="container">
-        <div class="FAQ">
-            <h3>¿Que es NihongoLearn?</h3>
-            <p>
-                ¡Bienvenidos a nuestra página web de aprendizaje de japonés! 
-                Aquí encontrarás una herramienta interactiva que te ayudará a reconocer y 
-                familiarizarte con los caracteres japoneses. Nuestro enfoque se centra en los 
-                sistemas de escritura hiragana, katakana y algunos kanjis, y nuestro objetivo 
-                principal es mejorar tu habilidad para leer estos caracteres.
-            </p>
-            <p><strong>- Alexis Meléndez</strong></p>
-        </div>
-        <div class="tools">
-            <a href="./pages/nihongolab.html">
-                <h2>NihongoLab</h2>
-                <img src="./assets/chevron-right.svg" alt="ir">
-            </a>
-            <div class="card">
-                <div class="icon">
-                    <img src="./assets/clipboard-check.svg" alt="objetivo">
-                </div>
-                <div class="info">
-                    <h4>Objetivo</h4>
-                    <p>Transcribe el texto mostrado a romaji.</p>
-                </div>
+    <section class="list">
+        <h2>¿Que es NihongoLearn?</h2>
+        <p>Es una herramienta para aprender a reconocer los caracteres 
+            del idioma Japones, esto incluye <strong>Hiragana</strong>,
+            <strong>Katakana</strong> y <strong>Kanjis</strong>.
+        </p>
+    </section>
+    <section class="table">
+        <a class="card" href="./pages/nihongolab.html">
+            <div class="info">
+                <h3>NihongoLab</h3>
+                <p><span class="special">Objetivo:</span> 
+                    Escribe los caracteres de la pizzara en <strong>Romaji</strong></p>
             </div>
-        </div>
-        <div class="notes">
-            <h2>Notas | v1.2.1</h2>
-            <p>Buenas a todos, ya estan disponible los caracteres en 
-                Katakana para la herramienta NihongoLab, ahora se mostrara 
-                dos tipos de texto, en Hiragana y Katakana. Ambas escrituras 
-                son muy importantes para la comunicacion Japonesa.
-            </p>
-            <div class="logs">
-                <span>NihongoLab: Habilite los caracteres en Katakana.</span>
-                <span>NihongoLab: Actualice la probabilidad para que no salga 
-                    tan frecuente el texto en Katakana</span>
-            </div>
-        </div>
-    </div>
+        </a>
+    </section>
 </body>
 </html>

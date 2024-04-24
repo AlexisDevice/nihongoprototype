@@ -18,21 +18,23 @@
     --backColorDark: #121212;
     --firstColorLight: #BA1F33;
     --firstColorDark: #9CFC97;
-    --secondColor: #110B11;
+    --secondColorLight: #FFEBEF;
+    --secondColorDark: #181F1C;
 
     /* fonts */
     --nunitoFont: "Nunito", sans-serif;
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    background-color: light-dark(var(--backColorLight), var(--backColorDark));
 }
 
 .special {
     color: light-dark(var(--firstColorLight), var(--firstColorDark));
 }
 
-/* inicio */
+/* Welcome */
 
 .hero {
     display: flex;
@@ -41,11 +43,12 @@ body {
     align-items: center;
     width: 100%;
     height: 80vh;
-    background-color: light-dark(var(--backColorLight), var(--backColorDark));
+    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
 }
 
-.hero>img {
+.hero>.logo {
     width: 15vw;
+    fill: light-dark(var(--firstColorLight), var(--firstColorDark));
 }
 
 .hero>h1 {
@@ -60,6 +63,74 @@ body {
     color: light-dark(var(--textColorLight), var(--textColorDark));
 }
 
+/* section */
+
+section.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section.list h2 {
+    padding: 3.5% 0px;
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(1.5vw + 1.5vh);
+}
+
+section.list p {
+    text-align: center;
+    width: 60%;
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(1vw + 1vh);
+}
+
+/* Tabla de herramientas */
+
+.table {
+    margin-top: 10%;
+}
+
+/* Overwrite Card */
+
+a.card {
+    text-decoration: none;
+}
+
+a.card:hover .info h3 {
+    color: light-dark(var(--firstColorLight), var(--firstColorDark));;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.card .info h3 {
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(2vw + 1vh);
+}
+
+.card .info p {
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(1vw + 1vh);
+}
+
 @media screen and (max-width: 600px) {
-    
+    .hero {
+        height: 40vh;
+    }
+
+    section.list p {
+        width: 80%;
+    }
+
+    .table {
+        grid-template-columns: 1fr;
+    }
 }
