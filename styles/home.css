@@ -30,19 +30,19 @@
     background-color: var(--secundary);
 }
 
-.hero>img {
+.hero img {
     margin-top: 50px;
     width: 30%;
     max-width: 250px;
 }
 
-.hero>h1 {
+.hero h1 {
     font-family: sans-serif;
     font-size: calc(1em + 2vw);
     color: var(--color-text);
 }
 
-.hero>h2 {
+.hero h2 {
     font-family: sans-serif;
     font-size: calc(1em + 1vw);
     color: var(--color-text);
@@ -58,11 +58,11 @@
     background-color: var(--color-back);
 }
 
-.container>.FAQ {
+.container .FAQ {
     width: 70%;
 }
 
-.FAQ>h3 {
+.FAQ h3 {
     margin-top: 50px;
     text-align: center;
     font-family: sans-serif;
@@ -70,7 +70,7 @@
     color: var(--secundary);
 }
 
-.FAQ>p {
+.FAQ p {
     margin-top: 50px;
     text-align: center;
     font-family: sans-serif;
@@ -80,52 +80,53 @@
 
 /* Apartado de las herramientas */
 
-.container>.tools {
+.container .tools {
     width: 80%;
     padding-bottom: 200px;
 }
 
-.tools>a {
+.tools a {
     margin-top: 50px;
     display: flex;
     align-items: center;
     text-decoration: none;
+    width: fit-content;
 }
 
-.tools>a>h2 {
+.tools a h2 {
     color: var(--secundary);
     font-family: sans-serif;
     font-size: calc(1.5em + 1vw);
 }
 
-.tools>a>img {
+.tools a img {
     width: calc(1.5em + 1vw);
     height: calc(1.5em + 1vw);
 }
 
-.tools>.card {
+.tools .card {
     margin: 50px auto 0px auto;
     display: flex;
     justify-content: space-evenly;
     width: 90%;
 }
 
-.card>.icon {
+.card .icon {
     display: flex;
     align-items: center;
     width: 15%;
 }
 
-.icon>img {
+.icon img {
     height: 75%;
 }
 
-.card>.info {
+.card .info {
     width: 85%;
     border-left: 3px solid var(--secundary);
 }
 
-.info>h4 {
+.info h4 {
     margin: 0px auto;
     width: 90%;
     text-align: center;
@@ -133,7 +134,7 @@
     font-size: calc(1em + 0.7vw);
 }
 
-.info>p {
+.info p {
     margin: 0px auto;
     width: 90%;
     text-align: center;
@@ -147,7 +148,7 @@
     padding-bottom: 100px;
 }
 
-.notes>h2 {
+.notes h2 {
     margin: 50px auto;
     color: var(--primary);
     font-family: sans-serif;
@@ -155,7 +156,7 @@
     text-align: center;
 }
 
-.notes>p {
+.notes p {
     width: 75%;
     margin: 15px auto 0px auto;
     color: var(--primary);
@@ -164,7 +165,7 @@
     text-align: center;
 }
 
-.notes>.logs {
+.notes .logs {
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -172,7 +173,7 @@
     width: 80%;
 }
 
-.notes>.logs>span {
+.notes .logs span {
     border-left: 5px solid var(--primary);
     padding: 10px 0px 10px 20px;
     color: var(--primary);
@@ -186,18 +187,18 @@
         height: 400px;
     }
 
-    .tools>.card {
+    .tools .card {
         flex-direction: column;
     }
 
-    .card>.icon {
+    .card .icon {
         margin-bottom: 15px;
         justify-content: center;
         width: 100%;
         height: 15vw;
     }
 
-    .card>.info {
+    .card .info {
         width: 100%;
         border-left: none;
         border-top: 3px solid var(--secundary);

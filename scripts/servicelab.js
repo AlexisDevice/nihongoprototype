@@ -1,11 +1,60 @@
 var inbox = document.querySelector("input");
 var newCard = new Card();
+var userLevel = 1;
+var letterCounter = 1;
+
+function getLevel(level) {
+    switch(level) {
+        case 1:
+            return 4;
+        case 2:
+            return 9;
+        case 3:
+            return 14;
+        case 4:
+            return 19;
+        case 5:
+            return 24;
+        case 6:
+            return 29;
+        case 7:
+            return 34;
+        case 8:
+            return 37;
+        case 9:
+            return 42;
+        case 10:
+            return 45;
+        default:
+            return 4;
+    }
+}
+
+function freshLevel(resp) {
+    if(resp) {
+        letterCounter++;
+        if (letterCounter >= 6) {
+            letterCounter = 1;
+            if(userLevel <= 9) {
+                userLevel++;
+            }
+        }
+    } else {
+        letterCounter--;
+        if (letterCounter <= 0) {
+            letterCounter = 4;
+            if(userLevel >= 2) {
+                userLevel--;
+            }
+        }
+    }
+}
 
 function Create() {
     newCard = new Card();
     let y = 0; // Coordenadas del eje Y en la tabla Syllabary
-    for (let i = 1; i <= Utils.getNum(1, 9); i++) {
-        y = Utils.getNum(0, 45); //Todos los carracteres
+    for (let i = 1; i <= letterCounter; i++) {
+        y = Utils.getNum(0, getLevel(userLevel)); //Todos los carracteres
         newCard.romaji += Syllabary.getSyllabary(y).romaji;
         newCard.hiragana += Syllabary.getSyllabary(y).hiragana;
         newCard.katakana += Syllabary.getSyllabary(y).katakana;
@@ -67,16 +116,18 @@ function cleaner() {
 
 function isCorrect() {
     // Quitando los espacios sobrantes y volviendo minusculas
-    let user_answer = (((inbox.value).toLowerCase()).trim()); 
+    let user_answer = ((inbox.value).toLowerCase()).trim();
 
     if (user_answer == newCard.romaji) {
         show_message("Correcto");
         Utils.corrects++; //incrementa el score
+        freshLevel(true);
         addToHistoryNihongoLab(true);
     } else {
         show_message("Incorrecto");
         show_answer(newCard.romaji);
         Utils.incorrects++; // incrementa el score
+        freshLevel(false);
         addToHistoryNihongoLab(false);
     }
     freshScore();
