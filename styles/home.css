@@ -8,200 +8,129 @@
 /* Variables */
 
 :root {
-    --color-text: #dad7cd;
-    --primary: #99bf82;
-    --secundary: #252422;
-    --color-back: #efebe5;
-    --white: #f3f5f4;
+    /* Utilizando la prop de claro y oscuro para el navegador */
+    color-scheme: light dark;
+
+    /* new colors */
+    --textColorLight: #252422;
+    --textColorDark: #E6FAFC;
+    --backColorLight: #F5F5F5;
+    --backColorDark: #121212;
+    --firstColorLight: #BA1F33;
+    --firstColorDark: #9CFC97;
+    --secondColorLight: #FFEBEF;
+    --secondColorDark: #181F1C;
+
+    /* fonts */
+    --nunitoFont: "Nunito", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: light-dark(var(--backColorLight), var(--backColorDark));
 }
 
 .special {
-    color: var(--primary);
+    color: light-dark(var(--firstColorLight), var(--firstColorDark));
 }
 
-/* inicio */
+/* Welcome */
 
 .hero {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px;
-    background-color: var(--secundary);
+    height: 80vh;
+    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
 }
 
-.hero img {
-    margin-top: 50px;
-    width: 30%;
-    max-width: 250px;
+.hero>.logo {
+    width: 15vw;
+    fill: light-dark(var(--firstColorLight), var(--firstColorDark));
 }
 
-.hero h1 {
-    font-family: sans-serif;
-    font-size: calc(1em + 2vw);
-    color: var(--color-text);
+.hero>h1 {
+    font-family: var(--nunitoFont);
+    font-size: calc(2vw + 2vh);
+    color: light-dark(var(--textColorLight), var(--textColorDark));
 }
 
-.hero h2 {
-    font-family: sans-serif;
-    font-size: calc(1em + 1vw);
-    color: var(--color-text);
+.hero>h2 {
+    font-family: var(--nunitoFont);
+    font-size: calc(1.5vw + 1vh);
+    color: light-dark(var(--textColorLight), var(--textColorDark));
 }
 
-/* Contenido */
+/* section */
 
-.container {
+section.list {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: var(--color-back);
 }
 
-.container .FAQ {
-    width: 70%;
+section.list h2 {
+    padding: 3.5% 0px;
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(1.5vw + 1.5vh);
 }
 
-.FAQ h3 {
-    margin-top: 50px;
+section.list p {
     text-align: center;
-    font-family: sans-serif;
-    font-size: calc(1em + 2vw);
-    color: var(--secundary);
+    width: 60%;
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(1vw + 1vh);
 }
 
-.FAQ p {
-    margin-top: 50px;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: calc(1em + 1vw);
-    color: var(--secundary);
+/* Tabla de herramientas */
+
+.table {
+    margin-top: 10%;
 }
 
-/* Apartado de las herramientas */
+/* Overwrite Card */
 
-.container .tools {
-    width: 80%;
-    padding-bottom: 200px;
-}
-
-.tools a {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
+a.card {
     text-decoration: none;
-    width: fit-content;
 }
 
-.tools a h2 {
-    color: var(--secundary);
-    font-family: sans-serif;
-    font-size: calc(1.5em + 1vw);
-}
-
-.tools a img {
-    width: calc(1.5em + 1vw);
-    height: calc(1.5em + 1vw);
-}
-
-.tools .card {
-    margin: 50px auto 0px auto;
-    display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-}
-
-.card .icon {
-    display: flex;
-    align-items: center;
-    width: 15%;
-}
-
-.icon img {
-    height: 75%;
+a.card:hover .info h3 {
+    color: light-dark(var(--firstColorLight), var(--firstColorDark));
 }
 
 .card .info {
-    width: 85%;
-    border-left: 3px solid var(--secundary);
-}
-
-.info h4 {
-    margin: 0px auto;
-    width: 90%;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: calc(1em + 0.7vw);
-}
-
-.info p {
-    margin: 0px auto;
-    width: 90%;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: calc(1em + 0.5vw);
-}
-
-.notes {
-    width: 100%;
-    background-color: var(--secundary);
-    padding-bottom: 100px;
-}
-
-.notes h2 {
-    margin: 50px auto;
-    color: var(--primary);
-    font-family: sans-serif;
-    font-size: calc(1em + 1.5vw);
-    text-align: center;
-}
-
-.notes p {
-    width: 75%;
-    margin: 15px auto 0px auto;
-    color: var(--primary);
-    font-family: sans-serif;
-    font-size: calc(1em + 0.7vw);
-    text-align: center;
-}
-
-.notes .logs {
-    margin: 50px auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 80%;
+    width: 90%;
 }
 
-.notes .logs span {
-    border-left: 5px solid var(--primary);
-    padding: 10px 0px 10px 20px;
-    color: var(--primary);
-    font-family: sans-serif;
-    font-size: calc(1em + 0.7vw);
-    background-color: rgba(153, 191, 130, 0.1);
+.card .info h3 {
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(2vw + 1vh);
+}
+
+.card .info p {
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-family: var(--nunitoFont);
+    font-size: calc(1vw + 1vh);
 }
 
 @media screen and (max-width: 600px) {
     .hero {
-        height: 400px;
+        height: 40vh;
     }
 
-    .tools .card {
-        flex-direction: column;
+    section.list p {
+        width: 80%;
     }
 
-    .card .icon {
-        margin-bottom: 15px;
-        justify-content: center;
-        width: 100%;
-        height: 15vw;
-    }
-
-    .card .info {
-        width: 100%;
-        border-left: none;
-        border-top: 3px solid var(--secundary);
-        padding-top: 15px;
+    .table {
+        grid-template-columns: 1fr;
     }
 }
