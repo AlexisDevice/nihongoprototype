@@ -1,0 +1,38 @@
+/* Documento donde se guardara todos los estilos para los diccionarios */
+
+.table {
+    margin-top: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1%;
+}
+
+.letter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+    width: 90%;
+    height: fit-content;
+    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    border-radius: 8px;
+}
+
+.letter span {
+    text-align: center;
+    width: 33%;
+    font-family: var(--nunitoFont);
+    font-size: calc(0.5vw + 2vh);
+    color: light-dark(var(--textColorLight), var(--textColorDark));
+}
+
+.letter span:nth-child(2) {
+    border-left: 0.5vh solid light-dark(var(--firstColorLight), var(--firstColorDark));
+    border-right: 0.5vh solid light-dark(var(--firstColorLight), var(--firstColorDark));
+}
+
+@media screen and (max-width: 600px) {
+    .table {
+        gap: 0.1% 0px;
+        grid-template-columns: 1fr;
+    }
+}
