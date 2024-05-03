@@ -17,7 +17,6 @@
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    gap: 15% 0px;
     margin: 0px auto;
     width: 90%;
     height: fit-content;
@@ -26,9 +25,7 @@
 /* Carta */
 
 .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 5% auto;
     padding: 5% 0px;
     width: 90%;
     background-color: light-dark(var(--secondColorLight), var(--secondColorDark));

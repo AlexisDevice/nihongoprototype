@@ -24,6 +24,7 @@
     font-family: var(--nunitoFont);
     font-size: calc(0.5vw + 2vh);
     color: light-dark(var(--textColorLight), var(--textColorDark));
+    font-weight: bold;
 }
 
 .letter span:nth-child(2) {

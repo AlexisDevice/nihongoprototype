@@ -15,10 +15,12 @@
     --white: #f3f5f4;
     --color-correct: #a9dbc3;
     --color-incorrect: #f6c4c0;
-}
 
-body {
-    background: linear-gradient(45deg, rgba(45,106,79,1) 0%, rgba(8,28,21,1) 100%);
+    /* New Colors */
+    --CorrectColorLight: #538d22;
+    --CorrectColorDark: #a9dbc3;
+    --incorrectColorLight: #ba181b;
+    --incorrectColorDark: #f6c4c0;
 }
 
 .wrapper {
@@ -41,27 +43,25 @@ body {
     align-items: center;
     width: 100%;
     height: 80%;
-    background-color: var(--primary);
-    border-radius: 32px 32px 0px 0px;
 }
 
 .board span {
-    color: var(--secundary);
+    color: light-dark(var(--textColorLight), var(--textColorDark));
     font-family: sans-serif;
     font-weight: bold;
     text-align: center;
 }
 
 .board .issue {
-    font-size: calc(1em + 2vw);
+    font-size: calc(1vw + 4vh);
 }
 
 .board .message {
-    font-size: calc(1em + 1vw);
+    font-size: calc(1vw + 2vh);
 }
 
 .board .answer {
-    font-size: calc(1em + 1vw);
+    font-size: calc(1vw + 2vh);
 }
 
 .panel .bar {
@@ -70,8 +70,8 @@ body {
     align-items: center;
     width: 100%;
     height: 20%;
-    background-color: var(--secundary);
-    border-radius: 0px 0px 32px 32px;
+    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    border-radius: 16px;
 }
 
 .dock {
@@ -87,11 +87,11 @@ body {
     outline: none;
     width: 80%;
     height: 100%;
-    color: var(--secundary);
+    color: light-dark(var(--textColorDark), var(--textColorLight));
     font-family: sans-serif;
     font-size: 25px;
     text-align: center;
-    background-color: var(--color-text);
+    background-color: light-dark(var(--textColorLight), var(--textColorDark));
     border-radius: 8px 0px 0px 8px;
 }
 
@@ -99,7 +99,7 @@ body {
     cursor: pointer;
     padding: 12.5px;
     height: 50%;
-    background-color: var(--color-text);
+    background-color: light-dark(var(--textColorLight), var(--textColorDark));
     border-radius: 0px 8px 8px 0px;
 }
 
@@ -112,21 +112,21 @@ body {
 }
 
 .score span {
-    color: var(--color-text);
+    color: light-dark(var(--textColorLight), var(--textColorDark));
     font-family: sans-serif;
-    font-size: calc(1em + 1vw + 2vh);
+    font-size: calc(1vw + 4vh);
 }
 
 .score .correct {
     padding-right: 15%;
-    border-right: 2px solid var(--white);
-    color: var(--color-correct);
+    border-right: 2px solid light-dark(var(--textColorLight), var(--textColorDark));
+    color: light-dark(var(--CorrectColorLight), var(--CorrectColorDark));
 }
 
 .score .incorrect {
     padding-left: 15%;
-    border-left: 2px solid var(--white);
-    color: var(--color-incorrect);
+    border-left: 2px solid light-dark(var(--textColorLight), var(--textColorDark));
+    color: light-dark(var(--incorrectColorLight), var(--incorrectColorDark));
 }
 
 /* Historial */
@@ -137,7 +137,7 @@ body {
     align-items: center;
     width: 35%;
     height: 90%;
-    background-color: var(--secundary);
+    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
     border-radius: 32px;
 }
 
@@ -173,9 +173,9 @@ body {
 .card span {
     width: 100%;
     text-align: center;
-    color: var(--white);
+    color: light-dark(var(--textColorLight), var(--textColorDark));
     font-family: sans-serif;
-    font-size: calc(0.2em + 1vh + 1vw);
+    font-size: calc(1vw + 2vh);
     font-weight: bold;
 }
 
@@ -184,14 +184,14 @@ body {
 .card .response_correct {
     width: 90%;
     height: 5px;
-    background-color: var(--color-correct);
+    background-color: light-dark(var(--CorrectColorLight), var(--CorrectColorDark));
     border-radius: 8px;
 }
 
 .card .response_incorrect {
     width: 90%;
     height: 5px;
-    background-color: var(--color-incorrect);
+    background-color: light-dark(var(--incorrectColorLight), var(--incorrectColorDark));
     border-radius: 8px;
 }
 
@@ -213,12 +213,11 @@ body {
 
     .panel .board {
         height: 55%;
-        background-color: transparent;
         border-radius: 0%;
     }
 
     .board span {
-        color: var(--white);
+        color: light-dark(var(--textColorLight), var(--textColorDark));
     }
 
     .panel .bar {
@@ -241,5 +240,9 @@ body {
         width: 100%;
         height: 45%;
         border-radius: 0%;
+    }
+
+    .scroll .card {
+        min-height: 30%;
     }
 }

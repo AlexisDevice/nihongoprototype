@@ -78,6 +78,7 @@ a.card:hover .info h3 {
 .card .info {
     display: flex;
     flex-direction: column;
+    margin: 0px auto;
     width: 90%;
 }
 
