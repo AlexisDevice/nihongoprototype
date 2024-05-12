@@ -1,3 +1,22 @@
+:root {
+    /* Estas variables estaran en todos los archivos por temas de compatibilidad con iOS */
+    /* Utilizando la prop de claro y oscuro para el navegador */
+    color-scheme: light dark;
+
+    /* new colors */
+    --textColorLight: #252422;
+    --textColorDark: #E6FAFC;
+    --backColorLight: #F5F5F5;
+    --backColorDark: #121212;
+    --firstColorLight: #9D1B2C;
+    --firstColorDark: #9CFC97;
+    --secondColorLight: #fff0f3;
+    --secondColorDark: #181F1C;
+
+    /* fonts */
+    --nunitoFont: "Nunito", sans-serif;
+}
+
 /* Resets */
 
 * {
