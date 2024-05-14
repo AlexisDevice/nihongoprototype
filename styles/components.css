@@ -28,6 +28,6 @@
     margin: 5% auto;
     padding: 5% 0px;
     width: 90%;
-    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    background-color: var(--secondColorDark);
     border-radius: 16px;
 }

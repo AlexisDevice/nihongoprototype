@@ -46,7 +46,7 @@
 }
 
 .board span {
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-family: sans-serif;
     font-weight: bold;
     text-align: center;
@@ -70,7 +70,7 @@
     align-items: center;
     width: 100%;
     height: 20%;
-    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    background-color: var(--secondColorDark);
     border-radius: 16px;
 }
 
@@ -87,11 +87,11 @@
     outline: none;
     width: 80%;
     height: 100%;
-    color: light-dark(var(--textColorDark), var(--textColorLight));
+    color: var(--textColorLight);
     font-family: sans-serif;
     font-size: 25px;
     text-align: center;
-    background-color: light-dark(var(--textColorLight), var(--textColorDark));
+    background-color: var(--textColorDark);
     border-radius: 8px 0px 0px 8px;
 }
 
@@ -99,7 +99,7 @@
     cursor: pointer;
     padding: 12.5px;
     height: 50%;
-    background-color: light-dark(var(--textColorLight), var(--textColorDark));
+    background-color: var(--textColorDark);
     border-radius: 0px 8px 8px 0px;
 }
 
@@ -112,21 +112,21 @@
 }
 
 .score span {
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-family: sans-serif;
     font-size: calc(1vw + 4vh);
 }
 
 .score .correct {
     padding-right: 15%;
-    border-right: 2px solid light-dark(var(--textColorLight), var(--textColorDark));
-    color: light-dark(var(--CorrectColorLight), var(--CorrectColorDark));
+    border-right: 2px solid var(--textColorDark);
+    color: var(--CorrectColorDark);
 }
 
 .score .incorrect {
     padding-left: 15%;
-    border-left: 2px solid light-dark(var(--textColorLight), var(--textColorDark));
-    color: light-dark(var(--incorrectColorLight), var(--incorrectColorDark));
+    border-left: 2px solid var(--textColorDark);
+    color: var(--incorrectColorDark);
 }
 
 /* Historial */
@@ -137,7 +137,7 @@
     align-items: center;
     width: 35%;
     height: 90%;
-    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    background-color: var(--secondColorDark);
     border-radius: 32px;
 }
 
@@ -173,7 +173,7 @@
 .card span {
     width: 100%;
     text-align: center;
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-family: sans-serif;
     font-size: calc(1vw + 2vh);
     font-weight: bold;
@@ -184,14 +184,14 @@
 .card .response_correct {
     width: 90%;
     height: 5px;
-    background-color: light-dark(var(--CorrectColorLight), var(--CorrectColorDark));
+    background-color: var(--CorrectColorDark);
     border-radius: 8px;
 }
 
 .card .response_incorrect {
     width: 90%;
     height: 5px;
-    background-color: light-dark(var(--incorrectColorLight), var(--incorrectColorDark));
+    background-color: var(--incorrectColorDark);
     border-radius: 8px;
 }
 
@@ -217,7 +217,7 @@
     }
 
     .board span {
-        color: light-dark(var(--textColorLight), var(--textColorDark));
+        color: var(--textColorDark);
     }
 
     .panel .bar {

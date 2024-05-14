@@ -12,8 +12,9 @@
 }
 
 :root {
-    /* Utilizando la prop de claro y oscuro para el navegador */
+    /* Utilizando la prop de claro y oscuro para el navegador
     color-scheme: light dark;
+    Inhabilitado por incompatibilidad con el navegador Safari */
 
     /* new colors */
     --textColorLight: #252422;
@@ -31,4 +32,5 @@
 
 body {
     min-height: 100vh;
+    background-color: var(--backColorDark);
 }

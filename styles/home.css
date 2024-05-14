@@ -1,9 +1,5 @@
-body {
-    background-color: light-dark(var(--backColorLight), var(--backColorDark));
-}
-
 .special {
-    color: light-dark(var(--firstColorLight), var(--firstColorDark));
+    color:var(--firstColorDark);
 }
 
 /* Welcome */
@@ -15,24 +11,24 @@ body {
     align-items: center;
     width: 100%;
     height: 80vh;
-    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    background-color: var(--secondColorDark);
 }
 
 .hero>.logo {
     width: 15vw;
-    fill: light-dark(var(--firstColorLight), var(--firstColorDark));
+    fill: var(--firstColorDark);
 }
 
 .hero>h1 {
     font-family: var(--nunitoFont);
     font-size: calc(2vw + 2vh);
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
 }
 
 .hero>h2 {
     font-family: var(--nunitoFont);
     font-size: calc(1.5vw + 1vh);
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
 }
 
 /* section */
@@ -46,7 +42,7 @@ section.list {
 
 section.list h2 {
     padding: 3.5% 0px;
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-family: var(--nunitoFont);
     font-size: calc(1.5vw + 1.5vh);
 }
@@ -54,7 +50,7 @@ section.list h2 {
 section.list p {
     text-align: center;
     width: 60%;
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-family: var(--nunitoFont);
     font-size: calc(1vw + 1vh);
 }
@@ -72,7 +68,7 @@ a.card {
 }
 
 a.card:hover .info h3 {
-    color: light-dark(var(--firstColorLight), var(--firstColorDark));
+    color: var(--firstColorDark);
 }
 
 .card .info {
@@ -83,13 +79,13 @@ a.card:hover .info h3 {
 }
 
 .card .info h3 {
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-family: var(--nunitoFont);
     font-size: calc(2vw + 1vh);
 }
 
 .card .info p {
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-family: var(--nunitoFont);
     font-size: calc(1vw + 1vh);
 }

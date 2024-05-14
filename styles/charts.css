@@ -14,7 +14,7 @@
     padding: 5%;
     width: 75%;
     height: fit-content;
-    background-color: light-dark(var(--secondColorLight), var(--secondColorDark));
+    background-color: var(--secondColorDark);
     border-radius: 8px;
 }
 
@@ -23,13 +23,13 @@
     width: 33%;
     font-family: var(--nunitoFont);
     font-size: calc(0.5vw + 2vh);
-    color: light-dark(var(--textColorLight), var(--textColorDark));
+    color: var(--textColorDark);
     font-weight: bold;
 }
 
 .letter span:nth-child(2) {
-    border-left: 0.5vh solid light-dark(var(--firstColorLight), var(--firstColorDark));
-    border-right: 0.5vh solid light-dark(var(--firstColorLight), var(--firstColorDark));
+    border-left: 0.5vh solid var(--firstColorDark);
+    border-right: 0.5vh solid var(--firstColorDark);
 }
 
 @media screen and (max-width: 600px) {
