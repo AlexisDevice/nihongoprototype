@@ -98,12 +98,11 @@ section.notes-version {
     align-items: center;
     margin: auto;
     width: 90%;
-    min-height: 400px;
 }
 
 section.notes-version h2 {
-    margin-top: 35px;
-    padding: 15px 20px;
+    margin-top: 5vh;
+    padding: 2vh 2vw;
     font-family: var(--nunitoFont);
     font-size: calc(2vw + 1vh);
     color: var(--textColorLight);
@@ -113,7 +112,7 @@ section.notes-version h2 {
 }
 
 section.notes-version .note {
-    margin-top: 50px;
+    margin-top: 5vh;
     width: 90%;
     font-family: var(--nunitoFont);
     color: var(--textColorDark);
@@ -128,13 +127,13 @@ section.notes-version .logs {
 }
 
 section.notes-version .logs p {
-    margin: 10px 0px;
-    padding: 15px 25px;
+    margin: 1vh 0px;
+    padding: 2vh 3vw;
     background-color: var(--secondColorDark);
     font-size: calc(1vw + 1vh);
     font-family: var(--nunitoFont);
     color: var(--textColorDark);
-    border-left: 5px solid var(--firstColorDark);
+    border-left: calc(0.3vw + 0.3vh) solid var(--firstColorDark);
 }
 
 @media screen and (max-width: 600px) {
