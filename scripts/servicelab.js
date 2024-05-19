@@ -2,6 +2,7 @@ var inbox = document.querySelector("input");
 var newCard = new Card();
 var userLevel = 1;
 var letterCounter = 1;
+var neededHelp = false;
 
 function getLevel(level) {
     switch(level) {
@@ -61,6 +62,10 @@ function Create() {
     }
 }
 
+function show_assistance(assist) {
+    document.getElementById("assistance").textContent = assist;
+}
+
 function show_issue() {
     const Issue = (Utils.getNum(0, 9) <= 7) ? newCard.hiragana : newCard.katakana;
     Utils.show(Issue);
@@ -77,6 +82,7 @@ function show_answer(answer) {
 function freshScore() {
     document.getElementById("correct").textContent = Utils.corrects;
     document.getElementById("incorrect").textContent = Utils.incorrects;
+    document.getElementById("assist").textContent = Utils.assistance;
 }
 
 function addToHistoryNihongoLab(response) {
@@ -89,10 +95,26 @@ function addToHistoryNihongoLab(response) {
     const card_answer = document.createElement("span");
     const card_response = document.createElement("div");
     /* Asignando si la respuesta es correcta o no */
-    card_response.className = (response) ? "response_correct" : "response_incorrect";
 
     card_issue.textContent = document.getElementById("issue").textContent;
-    card_answer.textContent = (response) ? newCard.romaji : inbox.value + " | " + newCard.romaji;
+
+    switch(response) {
+        case 0:
+            card_answer.textContent = inbox.value + " | " + newCard.romaji;
+            card_response.className = "response_incorrect";
+            break;
+        case 1:
+            card_answer.textContent = newCard.romaji;
+            card_response.className = "response_correct";
+            break;
+        case 2:
+            card_answer.textContent = inbox.value;
+            card_response.className = "gotAssistance";
+            break;
+        default:
+            console.log("Value Exception!")
+            break;
+    }
 
     /* Agregando los elementos a la card */
     card.appendChild(card_issue);
@@ -108,34 +130,45 @@ function addToHistoryNihongoLab(response) {
 
 function cleaner() {
     let empty = "";
+    show_assistance(empty);
     show_issue(empty);
     show_message(empty);
     show_answer(empty);
     inbox.value = empty;
+    neededHelp = false;
 }
 
 function isCorrect() {
     // Quitando los espacios sobrantes y volviendo minusculas
     let user_answer = ((inbox.value).toLowerCase()).trim();
 
-    if (user_answer == newCard.romaji) {
+    if(neededHelp == true) {
+        Utils.assistance++;
+        addToHistoryNihongoLab(2);
+    } else if (user_answer == newCard.romaji) {
         show_message("Correcto");
         Utils.corrects++; //incrementa el score
         freshLevel(true);
-        addToHistoryNihongoLab(true);
+        addToHistoryNihongoLab(1);
     } else {
         show_message("Incorrecto");
         show_answer(newCard.romaji);
         Utils.incorrects++; // incrementa el score
         freshLevel(false);
-        addToHistoryNihongoLab(false);
+        addToHistoryNihongoLab(0);
     }
     freshScore();
 }
 
 function send() {
-    Utils.isAnswered = true;
-    isCorrect();
+    if(inbox.value == "?") {
+        document.getElementById("assistance").textContent = newCard.romaji;
+        inbox.value = "";
+        neededHelp = true;
+    } else {
+        Utils.isAnswered = true;
+        isCorrect();
+    }
 }
 
 function next_issue() {
