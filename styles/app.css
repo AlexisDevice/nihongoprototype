@@ -74,33 +74,37 @@
     border-radius: 16px;
 }
 
-.dock {
+.box {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40%;
-    height: 50px;
+    height: 50%;
 }
 
-.bar .dock input {
+.bar .box input {
     border: none;
     outline: none;
     width: 80%;
     height: 100%;
     color: var(--textColorLight);
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: calc(1vw + 2vh);
     text-align: center;
     background-color: var(--textColorDark);
     border-radius: 8px 0px 0px 8px;
 }
 
-.bar .dock img {
-    cursor: pointer;
-    padding: 12.5px;
-    height: 50%;
+.bar .box .send {
+    width: 20%;
+    height: 100%;
     background-color: var(--textColorDark);
+    background-image: url('../assets/cursor.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
     border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
 }
 
 .score {
@@ -138,7 +142,7 @@
     width: 35%;
     height: 90%;
     background-color: var(--secondColorDark);
-    border-radius: 32px;
+    border-radius: 16px;
 }
 
 .history .scroll {
@@ -152,12 +156,12 @@
 }
 
 .scroll::-webkit-scrollbar {
-    width: 7px;
+    width: 0.5vw;
 }
 
 .scroll::-webkit-scrollbar-thumb {
     background-color: var(--primary);
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .scroll .card {
@@ -227,8 +231,12 @@
         height: 45%;
     }
 
-    .dock {
+    .box {
         width: 80%;
+    }
+
+    .bar .box input, .bar .box .send {
+        height: 50%;
     }
 
     .score {
