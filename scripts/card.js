@@ -1,38 +1,38 @@
-class Card{
-    _romaji = '';
-    _hiragana = '';
-    _katakana = '';
-    _kanji = '';
+class Card {
+    text_romaji = '';
+    text_hiragana = '';
+    text_katakana = '';
+    text_kanji = '';
 
     set romaji(txt) {
-        this._romaji = txt;
+        this.text_romaji = txt;
     }
 
     get romaji() {
-        return this._romaji;
+        return this.text_romaji;
     }
 
     set hiragana(txt) {
-        this._hiragana = txt;
+        this.text_hiragana = txt;
     }
 
     get hiragana() {
-        return this._hiragana;
+        return this.text_hiragana;
     }
 
     set katakana(txt) {
-        this._katakana = txt;
+        this.text_katakana = txt;
     }
 
     get katakana() {
-        return this._katakana;
+        return this.text_katakana;
     }
 
     set kanji(txt) {
-        this._kanji = txt;
+        this.text_kanji = txt;
     }
 
     get kanji() {
-        return this._kanji;
+        return this.text_kanji;
     }
 }
