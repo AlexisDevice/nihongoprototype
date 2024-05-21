@@ -22,17 +22,19 @@
     <div class="wrapper">
         <div class="panel">
             <div class="board">
+                <span id="assistance" class="assistance"></span>
                 <span id="issue" class="issue"></span>
                 <span id="message" class="message"></span>
                 <span id="answer" class="answer"></span>
             </div>
             <div class="bar">
                 <div class="box">
-                    <input type="text" id="box">
+                    <input type="text" id="box" placeholder="Envia '?' para ayuda">
                     <div class="send" onclick="send_button();"></div>
                 </div>
                 <div class="score">
                     <span class="correct" id="correct">0</span>
+                    <span class="assist" id="assist">0</span>
                     <span class="incorrect" id="incorrect">0</span>
                 </div>
             </div>

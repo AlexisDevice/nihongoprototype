@@ -15,12 +15,6 @@
     --white: #f3f5f4;
     --color-correct: #a9dbc3;
     --color-incorrect: #f6c4c0;
-
-    /* New Colors */
-    --CorrectColorLight: #538d22;
-    --CorrectColorDark: #a9dbc3;
-    --incorrectColorLight: #ba181b;
-    --incorrectColorDark: #f6c4c0;
 }
 
 .wrapper {
@@ -47,9 +41,17 @@
 
 .board span {
     color: var(--textColorDark);
-    font-family: sans-serif;
+    font-family: var(--nunitoFont);
     font-weight: bold;
     text-align: center;
+}
+
+.board .assistance {
+    color: var(--textColorLight);
+    padding: 0.5vh calc(1vw + 2vh);
+    font-size: calc(1vw + 1vh);
+    border-radius: 4px;
+    background-color: var(--assistColor);
 }
 
 .board .issue {
@@ -89,7 +91,7 @@
     height: 100%;
     color: var(--textColorLight);
     font-family: sans-serif;
-    font-size: calc(1vw + 2vh);
+    font-size: calc(1vw + 1.5vh);
     text-align: center;
     background-color: var(--textColorDark);
     border-radius: 8px 0px 0px 8px;
@@ -116,20 +118,23 @@
 }
 
 .score span {
+    padding: 0px calc(1vw + 4vh);
     color: var(--textColorDark);
     font-family: sans-serif;
     font-size: calc(1vw + 4vh);
 }
 
 .score .correct {
-    padding-right: 15%;
-    border-right: 2px solid var(--textColorDark);
     color: var(--CorrectColorDark);
 }
 
+.score .assist {
+    border-right: calc(0.1vw + 0.5vh) solid var(--textColorDark);
+    color: var(--assistColor);
+    border-left: calc(00.1vw + 0.5vh) solid var(--textColorDark);
+}
+
 .score .incorrect {
-    padding-left: 15%;
-    border-left: 2px solid var(--textColorDark);
     color: var(--incorrectColorDark);
 }
 
@@ -183,20 +188,24 @@
     font-weight: bold;
 }
 
-/* Indicador de correcto o incorrecto */
-
-.card .response_correct {
+.card>div {
     width: 90%;
     height: 5px;
-    background-color: var(--CorrectColorDark);
     border-radius: 8px;
 }
 
+/* Indicador de correcto o incorrecto */
+
+.card .response_correct {
+    background-color: var(--CorrectColorDark);
+}
+
 .card .response_incorrect {
-    width: 90%;
-    height: 5px;
     background-color: var(--incorrectColorDark);
-    border-radius: 8px;
+}
+
+.card .gotAssistance {
+    background-color: var(--assistColor);
 }
 
 @media screen and (max-width: 600px) {

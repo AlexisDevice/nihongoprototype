@@ -26,6 +26,13 @@
     --secondColorLight: #fff0f3;
     --secondColorDark: #181F1C;
 
+    --assistColor: #E3D888;
+
+    --CorrectColorLight: #538d22;
+    --CorrectColorDark: #a9dbc3;
+    --incorrectColorLight: #ba181b;
+    --incorrectColorDark: #F0D2D1;
+
     /* fonts */
     --nunitoFont: "Nunito", sans-serif;
 }
